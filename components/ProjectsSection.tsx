@@ -6,6 +6,15 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
   {
+    name: "BookWise",
+    description: "Fullstack library system with admin dashboard | Next.js, PostgreSQL, Redis, Auth.js",
+    image: "/bookwise.png",
+    github: "https://github.com/hhn2/bookwise",
+    
+  },
+  
+  {
+    
     name: "QuizifyPDF",
     description:
       "Web app that generates a quiz on a PDF | Python, Langchain, Streamlit",
@@ -20,6 +29,7 @@ const projects = [
     github: "https://github.com/hhn2/biquadris",
     
   },
+  
   
 ]
 
