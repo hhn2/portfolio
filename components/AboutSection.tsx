@@ -24,17 +24,35 @@ const skills = [
 ]
 
 const experiences = [
-  { title: "Data Scientist | Sundosoft", date: "May 2024 - Sep 2024" },
+  { 
+    title: "Software Engineer Intern | Manulife", 
+    date: "Jan 2026 - Apr 2026",
+    image: "manulife.png"
+  },
+  { 
+    title: "Software Engineer Intern | Fundserv", 
+    date: "Sep 2025 - Dec 2025",
+    image: "fundserv.png"
+  },
+
+  { 
+    title: "Data Science Intern | Sundosoft", 
+    date: "May 2024 - Aug 2024",
+    image: "sundosoft.png"
+  },
+  
 ]
+  
+
 
 const education = [
   {
     institution: "University of Waterloo",
-    program: "Bachelor of Honours Computer Science",
+    program: "Candidate for Bachelor of Honours Computer Science",
     date: "Sep 2023 - Present",
+    image: "uwaterloo.png"
   },
 ]
-
 const AboutSection = () => {
   return (
     <section id="about">
@@ -44,33 +62,49 @@ const AboutSection = () => {
           <hr className="w-6 h-1 mx-auto my-4 bg-black-500 border-0 rounded"></hr>
         </h1>
 
-        <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
-          <div className="md:w-1/2">
+        <div className="flex flex-col space-y-10 md:p-4">
+          <div className="w-full">
             <h1 className="text-2xl font-bold mb-6">Education</h1>
             <ul>
               {education.map((edu, idx) => (
-                <li key={idx} className="mb-4">
-                  <p className="font-bold">{edu.institution}</p>
-                  <p>{edu.program}</p>
-                  <p className="text-gray-500">{edu.date}</p>
-                </li>
-              ))}
-            </ul>
-
-            <h1 className="text-2xl font-bold mt-10 mb-6">Experience</h1>
-            <ul>
-              {experiences.map((experience, idx) => (
-                <li key={idx} className="mb-4">
-                  <p className="font-bold">{experience.title}</p>
-                  <p className="text-gray-500">{experience.date}</p>
+                <li key={idx} className="mb-8 flex items-start gap-6">
+                  <img 
+                    src={edu.image} 
+                    alt={edu.institution}
+                    className="w-24 h-24 rounded-lg object-contain flex-shrink-0"
+                  />
+                  <div>
+                    <p className="font-bold text-xl">{edu.institution}</p>
+                    <p className="text-lg">{edu.program}</p>
+                    <p className="text-gray-500 text-lg">{edu.date}</p>
+                  </div>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="text-center md:w-1/2 md:text-left">
-            <h1 className="text-2xl font-bold mb-6">Skills</h1>
-            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+          <div className="w-full">
+            <h1 className="text-2xl font-bold mb-6">Experience</h1>
+            <ul>
+              {experiences.map((experience, idx) => (
+                <li key={idx} className="mb-8 flex items-start gap-6">
+                  <img 
+                    src={experience.image} 
+                    alt={experience.title}
+                    className="w-24 h-24 rounded-lg object-contain flex-shrink-0"
+                  />
+                  <div>
+                    <p className="font-bold text-xl">{experience.title}</p>
+                    <p className="text-gray-500 text-lg">{experience.date}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* <div className="w-full">
+            {/* <h1 className="text-2xl font-bold mb-6">Skills</h1> */}
+            {/* <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
               {skills.map((skill, idx) => (
                 <p
                   key={idx}
@@ -79,8 +113,8 @@ const AboutSection = () => {
                   {skill}
                 </p>
               ))}
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */} 
         </div>
       </div>
     </section>
