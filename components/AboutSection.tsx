@@ -25,6 +25,11 @@ const skills = [
 
 const experiences = [
   { 
+    title: "Software Engineer Intern | Wealthsimple", 
+    date: "Incoming Fall 2026",
+    image: "wealthsimple.png"
+  },
+  { 
     title: "Software Engineer Intern | Manulife", 
     date: "Jan 2026 - Apr 2026",
     image: "manulife.png"
