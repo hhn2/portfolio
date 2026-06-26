@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[792],{5792:function(a){a.exports={style:{fontFamily:"'__spaceGrotesk_5a50ed', '__spaceGrotesk_Fallback_5a50ed'"},className:"__className_5a50ed",variable:"__variable_5a50ed"}}}]);

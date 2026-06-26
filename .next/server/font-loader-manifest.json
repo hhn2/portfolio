@@ -1,14 +1,22 @@
 {
   "pages": {},
   "app": {
-    "/vercel/share/v0-project/node_modules/@next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Space_Grotesk\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-display\",\"display\":\"swap\"}],\"variableName\":\"spaceGrotesk\"}": [
-      "static/media/36966cca54120369.p.woff2"
+    "C:\\Users\\lucas\\portfolio\\node_modules\\@next\\font\\local\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"\",\"arguments\":[{\"src\":[{\"path\":\"../node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-400-normal.woff2\",\"weight\":\"400\",\"style\":\"normal\"},{\"path\":\"../node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-500-normal.woff2\",\"weight\":\"500\",\"style\":\"normal\"},{\"path\":\"../node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-600-normal.woff2\",\"weight\":\"600\",\"style\":\"normal\"},{\"path\":\"../node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-700-normal.woff2\",\"weight\":\"700\",\"style\":\"normal\"}],\"variable\":\"--font-display\",\"display\":\"swap\"}],\"variableName\":\"spaceGrotesk\"}": [
+      "static/media/5977941da3f6f441.p.woff2",
+      "static/media/d7cc7ee67b2a053c.p.woff2",
+      "static/media/46d978a299613541.p.woff2",
+      "static/media/31250b261513219c.p.woff2"
     ],
-    "/vercel/share/v0-project/node_modules/@next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Inconsolata\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-mono\",\"display\":\"swap\"}],\"variableName\":\"inconsolata\"}": [
-      "static/media/d8c14dc5fcaf3a63.p.woff2"
+    "C:\\Users\\lucas\\portfolio\\node_modules\\@next\\font\\local\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"\",\"arguments\":[{\"src\":[{\"path\":\"../node_modules/@fontsource/inconsolata/files/inconsolata-latin-400-normal.woff2\",\"weight\":\"400\",\"style\":\"normal\"},{\"path\":\"../node_modules/@fontsource/inconsolata/files/inconsolata-latin-500-normal.woff2\",\"weight\":\"500\",\"style\":\"normal\"},{\"path\":\"../node_modules/@fontsource/inconsolata/files/inconsolata-latin-700-normal.woff2\",\"weight\":\"700\",\"style\":\"normal\"}],\"variable\":\"--font-mono\",\"display\":\"swap\"}],\"variableName\":\"inconsolata\"}": [
+      "static/media/bb0edead3aa29cb2.p.woff2",
+      "static/media/c4521b9bfcb05b0b.p.woff2",
+      "static/media/eb50e0cc161c8e76.p.woff2"
     ],
-    "/vercel/share/v0-project/node_modules/@next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-sans\",\"display\":\"swap\"}],\"variableName\":\"inter\"}": [
-      "static/media/e4af272ccee01ff0.p.woff2"
+    "C:\\Users\\lucas\\portfolio\\node_modules\\@next\\font\\local\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"\",\"arguments\":[{\"src\":[{\"path\":\"../node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2\",\"weight\":\"400\",\"style\":\"normal\"},{\"path\":\"../node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2\",\"weight\":\"500\",\"style\":\"normal\"},{\"path\":\"../node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2\",\"weight\":\"600\",\"style\":\"normal\"},{\"path\":\"../node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2\",\"weight\":\"700\",\"style\":\"normal\"}],\"variable\":\"--font-sans\",\"display\":\"swap\"}],\"variableName\":\"inter\"}": [
+      "static/media/ef6d3f52c547a6e3.p.woff2",
+      "static/media/8fb1a96451cec840.p.woff2",
+      "static/media/b7b43acee81d05a8.p.woff2",
+      "static/media/953b7aa585d36a2b.p.woff2"
     ]
   }
 }
