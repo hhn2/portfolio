@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@fontsource/inconsolata": "^5.1.1",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/space-grotesk": "^5.2.10",
     "@next/font": "13.1.6",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
