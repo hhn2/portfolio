@@ -1,8 +1,7 @@
-"use client" // this is a client component
-import React from "react"
-import { useState } from "react"
+"use client"
+
+import React, { useEffect, useState } from "react"
 import { Link } from "react-scroll/modules"
-import { usePathname } from "next/navigation"
 import { IoMdMenu, IoMdClose } from "react-icons/io"
 
 interface NavItem {
@@ -11,74 +10,104 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: "Home",
-    page: "home",
-  },
-  {
-    label: "About",
-    page: "about",
-  },
-  {
-    label: "Projects",
-    page: "projects",
-  },
+  { label: "Home", page: "home" },
+  { label: "About", page: "about" },
+  { label: "Projects", page: "projects" },
 ]
 
 export default function Navbar() {
-  const pathname = usePathname()
-  const [navbar, setNavbar] = useState(false)
+  const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12)
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
   return (
-    <header className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow bg-white">
-      <div className="justify-between md:items-center md:flex">
-        <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <Link to="home">
-              <div className="container flex items-center space-x-2">
-                <h2 className="text-2xl font-bold">Hannah Hwang</h2>
-              </div>
+    <header
+      className={`fixed top-0 z-50 w-full transition-colors duration-300 ${
+        scrolled
+          ? "border-b border-border bg-background/80 backdrop-blur-md"
+          : "border-b border-transparent bg-transparent"
+      }`}
+    >
+      <nav className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4 sm:px-6">
+        <Link
+          to="home"
+          smooth
+          duration={500}
+          className="cursor-pointer font-mono text-sm font-medium tracking-tight"
+        >
+          hannah hwang
+          <span className="text-accent">.</span>
+        </Link>
+
+        {/* Desktop nav */}
+        <div className="hidden items-center gap-8 md:flex">
+          {NAV_ITEMS.map((item, idx) => (
+            <Link
+              key={idx}
+              to={item.page}
+              spy
+              smooth
+              offset={-100}
+              duration={500}
+              activeClass="text-foreground"
+              className="link-underline cursor-pointer font-mono text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {item.label.toLowerCase()}
             </Link>
-            <div className="md:hidden">
-              <button
-                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                onClick={() => setNavbar(!navbar)}
-              >
-                {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
-              </button>
-            </div>
-          </div>
+          ))}
+          <a
+            href="mailto:h24hwang@uwaterloo.ca"
+            className="rounded-md border border-foreground px-3 py-1.5 font-mono text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
+          >
+            get in touch
+          </a>
         </div>
 
-        <div>
-          <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? "block" : "hidden"
-            }`}
-          >
-            <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              {NAV_ITEMS.map((item, idx) => {
-                return (
-                  <Link
-                    key={idx}
-                    to={item.page}
-                    className={
-                      "block lg:inline-block text-neutral-900  hover:text-neutral-500 cursor-pointer"
-                    }
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    onClick={() => setNavbar(!navbar)}
-                  >
-                    {item.label}
-                  </Link>
-                )
-              })}
-            </div>
+        {/* Mobile toggle */}
+        <button
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          className="text-foreground md:hidden"
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <IoMdClose size={26} /> : <IoMdMenu size={26} />}
+        </button>
+      </nav>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="border-t border-border bg-background px-5 py-4 md:hidden">
+          <div className="flex flex-col gap-4">
+            {NAV_ITEMS.map((item, idx) => (
+              <Link
+                key={idx}
+                to={item.page}
+                spy
+                smooth
+                offset={-100}
+                duration={500}
+                onClick={() => setOpen(false)}
+                className="cursor-pointer font-mono text-base text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {item.label.toLowerCase()}
+              </Link>
+            ))}
+            <a
+              href="mailto:h24hwang@uwaterloo.ca"
+              onClick={() => setOpen(false)}
+              className="font-mono text-base text-accent"
+            >
+              get in touch
+            </a>
           </div>
         </div>
-      </div>
+      )}
     </header>
   )
 }
