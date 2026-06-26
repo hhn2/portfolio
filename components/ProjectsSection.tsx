@@ -1,81 +1,101 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import SlideUp from "./SlideUp";
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
+import React from "react"
+import Image from "next/image"
+import Link from "next/link"
+import SlideUp from "./SlideUp"
+import { BsArrowUpRight } from "react-icons/bs"
 
 const projects = [
   {
     name: "English Academy Platform",
     description:
-      "Fullstack English Academy platform with admin dashboard | Next.js, Typescript, PostreSQL, Drizzle ORM, Auth.js, AWS S3, Video.js",
+      "Fullstack learning platform with an admin dashboard, video lessons, and authentication.",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle", "Auth.js", "AWS S3"],
     image: "/jamieny.png",
-    github: "https://jamieny.com",
+    link: "https://jamieny.com",
   },
   {
     name: "QuizifyPDF",
-    description: "Web app that generates a quiz on a PDF | Python, Langchain, Streamlit",
+    description:
+      "Web app that reads a PDF and automatically generates a quiz from its contents.",
+    tags: ["Python", "LangChain", "Streamlit"],
     image: "/Quizify.png",
-    github: "https://github.com/hhn2/PDF-chat",
+    link: "https://github.com/hhn2/PDF-chat",
   },
   {
     name: "Two-player Tetris",
-    description: "Interactive two-player tetris | C++",
+    description:
+      "Interactive two-player Tetris built with a focus on clean object-oriented design.",
+    tags: ["C++"],
     image: "/biquadris.png",
-    github: "https://github.com/hhn2/biquadris",
+    link: "https://github.com/hhn2/biquadris",
   },
-];
+]
 
 const ProjectsSection = () => {
   return (
-    <section id="projects">
-      <h1 className="my-10 text-center font-bold text-4xl">
-        Projects
-        <hr className="w-6 h-1 mx-auto my-4 bg-black-500 border-0 rounded"></hr>
-      </h1>
+    <section id="projects" className="py-24 md:py-32">
+      <SlideUp>
+        <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
+          02 — Projects
+        </p>
+        <p className="mt-6 max-w-2xl text-balance text-2xl font-medium leading-snug tracking-tight md:text-3xl">
+          A selection of things I&apos;ve designed, built, and shipped.
+        </p>
+      </SlideUp>
 
-      <div className="flex flex-col space-y-28">
+      <div className="mt-16 flex flex-col">
         {projects.map((project, idx) => (
-          <div key={idx}>
-            <SlideUp offset="-300px 0px -300px 0px">
-              <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
-                <div className="md:w-1/2">
-                  <Image
-                    src={project.image}
-                    alt={project.name}
-                    width={1000}
-                    height={1000}
-                    className="rounded-xl shadow-xl hover:opacity-70"
+          <SlideUp key={idx} offset="-200px 0px -200px 0px">
+            <Link
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group grid grid-cols-1 gap-6 border-t border-border py-10 md:grid-cols-[1fr_1.1fr] md:gap-12"
+            >
+              {/* Image */}
+              <div className="overflow-hidden rounded-xl border border-border bg-muted">
+                <Image
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.name}
+                  width={1000}
+                  height={1000}
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                />
+              </div>
+
+              {/* Text */}
+              <div className="flex flex-col justify-center">
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-2xl font-semibold tracking-tight md:text-3xl">
+                    {project.name}
+                  </h3>
+                  <BsArrowUpRight
+                    size={22}
+                    className="mt-1 flex-shrink-0 text-muted-foreground transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
                   />
                 </div>
-                <div className="mt-8 md:w-1/2">
-                  <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
-                  <p className="text-xl leading-7 mb-4 text-neutral-600">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-row align-bottom space-x-4">
-                    <Link href={project.github} target="_blank">
-                      {project.name === "English Academy Platform" ? (
-                        <BsArrowUpRightSquare
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      ) : (
-                        <BsGithub
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      )}
-                    </Link>
-                  </div>
+
+                <p className="mt-4 max-w-md text-pretty text-base leading-relaxed text-muted-foreground">
+                  {project.description}
+                </p>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {project.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="rounded-full border border-border px-3 py-1 font-mono text-xs text-muted-foreground"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
-            </SlideUp>
-          </div>
+            </Link>
+          </SlideUp>
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ProjectsSection;
+export default ProjectsSection
