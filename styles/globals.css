@@ -4,14 +4,14 @@
 
 @layer base {
   :root {
-    /* Warm, minimal editorial palette */
-    --background: 40 30% 98%; /* warm off-white */
-    --foreground: 0 0% 9%; /* near-black ink */
-    --muted: 40 16% 94%;
-    --muted-foreground: 0 0% 44%;
-    --border: 36 12% 88%;
-    --accent: 18 88% 52%; /* single warm accent, used sparingly */
-    --accent-foreground: 40 30% 98%;
+    /* Cool neutral palette with a restrained blue accent */
+    --background: 210 20% 98%; /* cool off-white */
+    --foreground: 215 28% 12%; /* cool near-black ink */
+    --muted: 210 16% 94%;
+    --muted-foreground: 215 14% 44%;
+    --border: 214 16% 88%;
+    --accent: 217 91% 52%; /* blue accent, used sparingly */
+    --accent-foreground: 210 20% 98%;
     --radius: 0.5rem;
   }
 

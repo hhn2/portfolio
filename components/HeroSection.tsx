@@ -31,7 +31,7 @@ const HeroSection = () => {
           Open to Summer 2027 internships
         </div>
 
-        <h1 className="text-balance text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
+        <h1 className="font-display text-balance text-5xl font-medium leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
           Hannah Hwang
         </h1>
 

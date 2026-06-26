@@ -47,8 +47,8 @@ export default function CustomCursor() {
 
     const render = () => {
       // Ring eases toward the pointer for a soft trailing feel.
-      ring.x += (mouse.x - ring.x) * 0.18
-      ring.y += (mouse.y - ring.y) * 0.18
+      ring.x += (mouse.x - ring.x) * 0.32
+      ring.y += (mouse.y - ring.y) * 0.32
       if (ringRef.current) {
         ringRef.current.style.transform = `translate3d(${ring.x}px, ${ring.y}px, 0) translate(-50%, -50%)`
       }
@@ -110,7 +110,7 @@ export default function CustomCursor() {
             : "hsl(var(--foreground))",
           transform: "translate3d(-100px,-100px,0) translate(-50%,-50%)",
           transition: "background-color 0.25s ease, scale 0.12s ease",
-          scale: String(hovering ? 0 : 1),
+          scale: String(pressed ? 1.6 : 1),
         }}
       />
     </div>

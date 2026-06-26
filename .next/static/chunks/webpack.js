@@ -192,7 +192,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "7d75058fc82330eb"; }
+/******/ 		__webpack_require__.h = function() { return "066f544b363a33ba"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -798,7 +798,7 @@
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = function(chunkId, promises) {
-/******/ 			var cssChunks = {"_app-client_styles_globals_css":1,"_app-client_node_modules_next_font_google_target_css_path_app_layout_tsx_import_Inter_argumen-d7bd05":1,"_app-client_node_modules_next_font_google_target_css_path_app_layout_tsx_import_Inconsolata_a-7bd0b1":1};
+/******/ 			var cssChunks = {"_app-client_node_modules_next_font_google_target_css_path_app_layout_tsx_import_Inter_argumen-d7bd05":1,"_app-client_node_modules_next_font_google_target_css_path_app_layout_tsx_import_Inconsolata_a-7bd0b1":1,"_app-client_node_modules_next_font_google_target_css_path_app_layout_tsx_import_Space_Grotesk-6e0623":1,"_app-client_styles_globals_css":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(function() {

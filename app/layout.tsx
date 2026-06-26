@@ -1,6 +1,6 @@
 import "../styles/globals.css"
 import type { Metadata, Viewport } from "next"
-import { Inter, Inconsolata } from "@next/font/google"
+import { Inter, Inconsolata, Space_Grotesk } from "@next/font/google"
 import Navbar from "@/components/Navbar"
 import CustomCursor from "@/components/CustomCursor"
 
@@ -16,6 +16,12 @@ const inconsolata = Inconsolata({
   display: "swap",
 })
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+})
+
 export const metadata: Metadata = {
   title: "Hannah Hwang — Computer Science",
   description:
@@ -24,7 +30,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#fafaf7",
+  themeColor: "#f7f9fb",
   width: "device-width",
   initialScale: 1,
 }
@@ -37,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${inconsolata.variable} bg-background`}
+      className={`${inter.variable} ${inconsolata.variable} ${spaceGrotesk.variable} bg-background`}
     >
       <body className="font-sans antialiased text-foreground">
         <CustomCursor />

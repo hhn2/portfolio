@@ -44,7 +44,7 @@ const Footer = () => {
       </div>
 
       <p className="mt-12 font-mono text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Hannah Hwang — Designed & built with care.
+        © {new Date().getFullYear()} Hannah Hwang
       </p>
     </footer>
   )
