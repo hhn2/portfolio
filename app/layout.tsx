@@ -1,5 +1,4 @@
 import "../styles/globals.css"
-import type { Metadata } from "next"
 import { Inter, Inconsolata, Space_Grotesk } from "@next/font/google"
 import Navbar from "@/components/Navbar"
 import CustomCursor from "@/components/CustomCursor"
@@ -22,13 +21,11 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Hannah Hwang — Computer Science",
   description:
     "Hannah Hwang — Computer Science student at the University of Waterloo. Software engineering, projects, and experience.",
   icons: { icon: "/appleprofile.png" },
-  themeColor: "#f7f9fb",
-  viewport: "width=device-width, initial-scale=1",
 }
 
 export default function RootLayout({
@@ -41,6 +38,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${inconsolata.variable} ${spaceGrotesk.variable} bg-background`}
     >
+      <head>
+        <meta name="theme-color" content="#f7f9fb" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className="font-sans antialiased text-foreground">
         <CustomCursor />
         <Navbar />
