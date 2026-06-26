@@ -38,9 +38,6 @@ const ProjectsSection = () => {
         <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
           02 — Projects
         </p>
-        <p className="mt-6 max-w-2xl text-balance text-2xl font-medium leading-snug tracking-tight md:text-3xl">
-          A selection of things I&apos;ve designed, built, and shipped.
-        </p>
       </SlideUp>
 
       <div className="mt-16 flex flex-col">

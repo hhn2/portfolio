@@ -35,12 +35,6 @@ const HeroSection = () => {
           Hannah Hwang
         </h1>
 
-        <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-          Computer Science student at the{" "}
-          <span className="text-foreground">University of Waterloo</span>,
-          building thoughtful software and clean, intentional interfaces.
-        </p>
-
         {/* Social links */}
         <div className="mt-10 flex items-center gap-3">
           {socials.map(({ icon: Icon, href, label }, idx) => (

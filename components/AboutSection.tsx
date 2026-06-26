@@ -80,11 +80,6 @@ const AboutSection = () => {
         <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
           01 — About
         </p>
-        <p className="mt-6 max-w-2xl text-balance text-2xl font-medium leading-snug tracking-tight md:text-3xl">
-          I&apos;m a developer who cares about the details — writing clean code
-          and designing interfaces that feel calm, considered, and effortless to
-          use.
-        </p>
       </SlideUp>
 
       <div className="mt-20 grid grid-cols-1 gap-16 md:grid-cols-[200px_1fr] md:gap-12">
