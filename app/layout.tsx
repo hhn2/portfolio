@@ -1,5 +1,5 @@
 import "../styles/globals.css"
-import type { Metadata, Viewport } from "next"
+import type { Metadata } from "next"
 import { Inter, Inconsolata, Space_Grotesk } from "@next/font/google"
 import Navbar from "@/components/Navbar"
 import CustomCursor from "@/components/CustomCursor"
@@ -27,12 +27,8 @@ export const metadata: Metadata = {
   description:
     "Hannah Hwang — Computer Science student at the University of Waterloo. Software engineering, projects, and experience.",
   icons: { icon: "/appleprofile.png" },
-}
-
-export const viewport: Viewport = {
   themeColor: "#f7f9fb",
-  width: "device-width",
-  initialScale: 1,
+  viewport: "width=device-width, initial-scale=1",
 }
 
 export default function RootLayout({
