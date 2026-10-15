@@ -56,29 +56,34 @@ export default function CustomCursor() {
       <div
         ref={arrowRef}
         className="fixed left-0 top-0 will-change-transform"
-        style={{
-          transform: "translate3d(-100px,-100px,0)",
-          // Subtle press feedback; tip stays anchored at the top-left origin.
-          scale: String(pressed ? 0.85 : 1),
-          transformOrigin: "0 0",
-          transition: "scale 0.12s ease",
-        }}
+        style={{ transform: "translate3d(-100px,-100px,0)" }}
       >
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+        {/* Press feedback lives on an inner wrapper: scaling the same element
+            that carries the translate would scale the position too, making the
+            cursor jump toward the top-left on every click. */}
+        <div
+          style={{
+            scale: String(pressed ? 0.85 : 1),
+            transformOrigin: "0 0",
+            transition: "scale 0.12s ease",
+          }}
         >
-          <path
-            d="M5 3 L5 19 L9.2 14.8 L12 21 L15 19.7 L12.2 13.6 L18 13.6 Z"
-            fill="hsl(var(--accent))"
-            stroke="hsl(var(--background))"
-            strokeWidth="1.2"
-            strokeLinejoin="round"
-          />
-        </svg>
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3 L5 19 L9.2 14.8 L12 21 L15 19.7 L12.2 13.6 L18 13.6 Z"
+              fill="hsl(var(--accent))"
+              stroke="hsl(var(--background))"
+              strokeWidth="1.2"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   )
