@@ -5,7 +5,7 @@ const experiences = [
   {
     title: "Software Engineer Intern",
     company: "Wealthsimple",
-    date: "Incoming Fall 2026",
+    date: "Sep 2026 — Present",
     image: "wealthsimple.png",
   },
   {
