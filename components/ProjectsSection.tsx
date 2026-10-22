@@ -22,14 +22,6 @@ const projects = [
     link: "https://jamieny.com",
   },
   {
-    name: "QuizifyPDF",
-    description:
-      "Web app that reads a PDF and automatically generates a quiz from its contents.",
-    tags: ["Python", "LangChain", "Streamlit"],
-    image: "/Quizify.png",
-    link: "https://github.com/hhn2/PDF-chat",
-  },
-  {
     name: "Two-player Tetris",
     description:
       "Interactive two-player Tetris built with a focus on clean object-oriented design.",
