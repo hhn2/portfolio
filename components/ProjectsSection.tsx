@@ -6,6 +6,14 @@ import { BsArrowUpRight } from "react-icons/bs"
 
 const projects = [
   {
+    name: "Online Board Games",
+    description:
+      "Multiplayer board games in the browser: make a room, share the code, and play with friends in real time. Starting with Splendor Duel.",
+    tags: ["JavaScript", "Cloudflare Workers", "Durable Objects", "WebSockets"],
+    image: "/games.png",
+    link: "https://games.hannahhwang.me",
+  },
+  {
     name: "English Academy Platform",
     description:
       "Fullstack learning platform with an admin dashboard, video lessons, and authentication.",
