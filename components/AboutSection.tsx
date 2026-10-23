@@ -46,8 +46,8 @@ type Item = {
 
 function TimelineRow({ item }: { item: Item }) {
   return (
-    <div className="group grid grid-cols-1 gap-3 border-t border-border py-7 sm:grid-cols-[140px_1fr] sm:gap-8">
-      <p className="font-mono text-xs uppercase tracking-[0.15em] text-muted-foreground sm:pt-1">
+    <div className="group grid grid-cols-1 gap-3 border-t border-border py-7 sm:grid-cols-[180px_1fr] sm:gap-8">
+      <p className="font-mono text-base uppercase tracking-[0.08em] text-muted-foreground sm:pt-1">
         {item.date}
       </p>
       <div className="flex items-start gap-4">
@@ -57,8 +57,8 @@ function TimelineRow({ item }: { item: Item }) {
           className="h-12 w-12 flex-shrink-0 rounded-md object-contain"
         />
         <div>
-          <p className="text-lg font-medium leading-snug">{item.primary}</p>
-          <p className="mt-0.5 text-base text-muted-foreground">
+          <p className="text-2xl font-medium leading-snug">{item.primary}</p>
+          <p className="mt-1 text-xl text-muted-foreground">
             {item.secondary}
           </p>
         </div>
@@ -68,7 +68,7 @@ function TimelineRow({ item }: { item: Item }) {
 }
 
 const SectionHeading = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="mb-2 font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground">
+  <h2 className="mb-2 font-mono text-base uppercase tracking-[0.14em] text-muted-foreground">
     {children}
   </h2>
 )
@@ -77,7 +77,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-24 md:py-32">
       <SlideUp>
-        <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
+        <p className="font-mono text-base uppercase tracking-[0.16em] text-accent">
           01 — About
         </p>
       </SlideUp>

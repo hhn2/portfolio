@@ -23,7 +23,7 @@ const HeroSection = () => {
     >
       <div className="animate-fadeUp">
         {/* Availability tag */}
-        <div className="mb-8 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+        <div className="mb-8 inline-flex items-center gap-2 font-mono text-base uppercase tracking-[0.12em] text-muted-foreground">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
@@ -60,7 +60,7 @@ const HeroSection = () => {
           smooth
           offset={-100}
           duration={500}
-          className="inline-flex cursor-pointer items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:text-foreground"
+          className="inline-flex cursor-pointer items-center gap-3 font-mono text-base uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:text-foreground"
         >
           <HiArrowDown size={16} className="animate-bounce" />
           Scroll
