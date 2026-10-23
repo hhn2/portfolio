@@ -39,7 +39,7 @@ export default function Navbar() {
           to="home"
           smooth
           duration={500}
-          className="cursor-pointer font-mono text-sm font-medium tracking-tight"
+          className="cursor-pointer font-mono text-lg font-medium tracking-tight"
         >
           hannah hwang
           <span className="text-accent">.</span>
@@ -56,14 +56,14 @@ export default function Navbar() {
               offset={-100}
               duration={500}
               activeClass="text-foreground"
-              className="link-underline cursor-pointer font-mono text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="link-underline cursor-pointer font-mono text-lg text-muted-foreground transition-colors hover:text-foreground"
             >
               {item.label.toLowerCase()}
             </Link>
           ))}
           <a
             href="mailto:h24hwang@uwaterloo.ca"
-            className="rounded-md border border-foreground px-3 py-1.5 font-mono text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
+            className="rounded-md border border-foreground px-4 py-2 font-mono text-lg text-foreground transition-colors hover:bg-foreground hover:text-background"
           >
             get in touch
           </a>
@@ -93,7 +93,7 @@ export default function Navbar() {
                 offset={-100}
                 duration={500}
                 onClick={() => setOpen(false)}
-                className="cursor-pointer font-mono text-base text-muted-foreground transition-colors hover:text-foreground"
+                className="cursor-pointer font-mono text-xl text-muted-foreground transition-colors hover:text-foreground"
               >
                 {item.label.toLowerCase()}
               </Link>
@@ -101,7 +101,7 @@ export default function Navbar() {
             <a
               href="mailto:h24hwang@uwaterloo.ca"
               onClick={() => setOpen(false)}
-              className="font-mono text-base text-accent"
+              className="font-mono text-xl text-accent"
             >
               get in touch
             </a>

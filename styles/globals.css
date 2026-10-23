@@ -8,7 +8,7 @@
     --background: 210 20% 98%; /* cool off-white */
     --foreground: 215 28% 12%; /* cool near-black ink */
     --muted: 210 16% 94%;
-    --muted-foreground: 215 14% 44%;
+    --muted-foreground: 215 16% 34%; /* darker grey for readable secondary text */
     --border: 214 16% 88%;
     --accent: 217 91% 52%; /* blue accent, used sparingly */
     --accent-foreground: 210 20% 98%;

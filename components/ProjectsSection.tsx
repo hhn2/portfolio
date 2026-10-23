@@ -8,7 +8,7 @@ const projects = [
   {
     name: "Online Board Games",
     description:
-      "Multiplayer board games in the browser: make a room, share the code, and play with friends in real time. Starting with Splendor Duel.",
+      "A collection of multiplayer board games on one real-time room server I built on Cloudflare. Every game plugs into the same rooms, invite links, chat and reconnects. Splendor Duel and Forbidden Desert so far, with more on the way.",
     tags: ["JavaScript", "Cloudflare Workers", "Durable Objects", "WebSockets"],
     image: "/games.png",
     link: "https://games.hannahhwang.me",
@@ -35,7 +35,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 md:py-32">
       <SlideUp>
-        <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
+        <p className="font-mono text-base uppercase tracking-[0.16em] text-accent">
           02 — Projects
         </p>
       </SlideUp>
@@ -63,7 +63,7 @@ const ProjectsSection = () => {
               {/* Text */}
               <div className="flex flex-col justify-center">
                 <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-2xl font-semibold tracking-tight md:text-3xl">
+                  <h3 className="text-3xl font-semibold tracking-tight md:text-4xl">
                     {project.name}
                   </h3>
                   <BsArrowUpRight
@@ -72,7 +72,7 @@ const ProjectsSection = () => {
                   />
                 </div>
 
-                <p className="mt-4 max-w-md text-pretty text-base leading-relaxed text-muted-foreground">
+                <p className="mt-4 max-w-xl text-pretty text-xl leading-relaxed text-muted-foreground">
                   {project.description}
                 </p>
 
@@ -80,7 +80,7 @@ const ProjectsSection = () => {
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="rounded-full border border-border px-3 py-1 font-mono text-xs text-muted-foreground"
+                      className="rounded-full border border-border px-3.5 py-1 font-mono text-base text-muted-foreground"
                     >
                       {tag}
                     </span>

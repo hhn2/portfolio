@@ -16,12 +16,12 @@ const Footer = () => {
     <footer className="border-t border-border py-16">
       <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:items-end">
         <div>
-          <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
+          <p className="font-mono text-base uppercase tracking-[0.16em] text-accent">
             Get in touch
           </p>
           <a
             href="mailto:h24hwang@uwaterloo.ca"
-            className="link-underline mt-4 inline-block text-2xl font-semibold tracking-tight md:text-3xl"
+            className="link-underline mt-4 inline-block text-3xl font-semibold tracking-tight md:text-4xl"
           >
             h24hwang@uwaterloo.ca
           </a>
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="mt-12 font-mono text-xs text-muted-foreground">
+      <p className="mt-12 font-mono text-base text-muted-foreground">
         © {new Date().getFullYear()} Hannah Hwang
       </p>
     </footer>
