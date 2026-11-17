@@ -4,13 +4,14 @@
 
 @layer base {
   :root {
-    /* Cool neutral palette with a restrained blue accent */
-    --background: 210 20% 98%; /* cool off-white */
+    /* Pale royal-blue palette. Text colours pass WCAG AA (4.5:1) against the
+       darkest point of the animated aurora background. */
+    --background: 217 55% 97.5%; /* pale blue, matches the aurora base */
     --foreground: 215 28% 12%; /* cool near-black ink */
     --muted: 210 16% 94%;
     --muted-foreground: 215 16% 34%; /* darker grey for readable secondary text */
-    --border: 214 16% 88%;
-    --accent: 217 91% 52%; /* blue accent, used sparingly */
+    --border: 217 30% 84%;
+    --accent: 217 91% 45%; /* blue accent, darkened to stay readable on the aurora */
     --accent-foreground: 210 20% 98%;
     --radius: 0.5rem;
   }

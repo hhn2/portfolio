@@ -2,6 +2,7 @@ import "../styles/globals.css"
 import localFont from "@next/font/local"
 import Navbar from "@/components/Navbar"
 import CustomCursor from "@/components/CustomCursor"
+import Aurora from "@/components/backgrounds/Aurora"
 
 const inter = localFont({
   src: [
@@ -53,11 +54,12 @@ export default function RootLayout({
       className={`${inter.variable} ${inconsolata.variable} ${spaceGrotesk.variable} bg-background`}
     >
       <head>
-        <meta name="theme-color" content="#f7f9fb" />
+        <meta name="theme-color" content="#f5f8fc" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="font-sans antialiased text-foreground">
         <CustomCursor />
+        <Aurora />
         <Navbar />
         {children}
       </body>

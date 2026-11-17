@@ -5,7 +5,7 @@ import Footer from "@/components/Footer"
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-5xl px-5 sm:px-6">
+    <main className="relative z-10 mx-auto max-w-5xl px-5 sm:px-6">
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
