@@ -8,8 +8,8 @@ const projects = [
   {
     name: "Online Board Games",
     description:
-      "A collection of multiplayer board games on one real-time room server I built on Cloudflare. Every game plugs into the same rooms, invite links, chat and reconnects. Splendor Duel and Forbidden Desert so far, with more on the way.",
-    tags: ["JavaScript", "Cloudflare Workers", "Durable Objects", "WebSockets"],
+      "A growing collection of multiplayer games, built end to end from design spec to test-driven code. All on a real-time server on Cloudflare, with one Durable Object per room streaming moves over WebSockets.",
+    tags: ["JavaScript", "Cloudflare Workers", "Durable Objects", "WebSockets", "Three.js"],
     image: "/games.png",
     link: "https://games.hannahhwang.me",
   },
